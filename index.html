@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Undangan Pernikahan — Aisyah & Fajar</title>
+    <meta name="description" content="Template undangan pernikahan modern & kekinian berbasis Tailwind CSS" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+            colors: {
+              blush: {
+                50: '#fff1f3',
+                100: '#ffe4e8',
+                200: '#fecdd6',
+                300: '#fda4af',
+                400: '#fb7185',
+                500: '#f43f5e',
+                600: '#e11d48',
+              },
+              sage: {
+                50: '#f1f5f3',
+                100: '#e4eee9',
+                200: '#cce0d7',
+                300: '#a7c9bb',
+                400: '#7fae9b',
+                500: '#5d8f7d',
+                600: '#466e61',
+              },
+              ink: '#161617',
+            },
+            boxShadow: {
+              soft: '0 10px 40px -15px rgba(16,24,40,0.25)'
+            },
+            backgroundImage: {
+              'paper': "radial-gradient(80% 60% at 50% 0%, rgba(244,63,94,.06), rgba(0,0,0,0) 60%), radial-gradient(60% 50% at 100% 10%, rgba(95,204,170,.08), rgba(0,0,0,0) 60%)",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Subtle animated underline for links */
+      .link-underline { position: relative; }
+      .link-underline::after{ content:''; position:absolute; left:0; bottom:-2px; width:0; height:2px; background: currentColor; transition: width .25s ease; }
+      .link-underline:hover::after{ width:100%; }
+    </style>
+  </head>
+  <body class="bg-white text-ink dark:bg-zinc-950 dark:text-zinc-100">
+    <!-- Sticky Header -->
+    <header class="fixed top-4 inset-x-0 z-50">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="backdrop-blur-md bg-white/70 dark:bg-zinc-900/60 border border-zinc-900/10 dark:border-white/10 rounded-2xl shadow-soft flex items-center justify-between px-4 py-3">
+          <a href="#home" class="font-serif text-lg tracking-wide">Aisyah <span class="text-blush-500">&</span> Fajar</a>
+          <nav class="hidden md:flex gap-6 text-sm">
+            <a href="#home" class="link-underline">Beranda</a>
+            <a href="#couple" class="link-underline">Mempelai</a>
+            <a href="#event" class="link-underline">Acara</a>
+            <a href="#gallery" class="link-underline">Galeri</a>
+            <a href="#rsvp" class="link-underline">RSVP</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-xl border border-zinc-900/10 dark:border-white/10 hover:bg-zinc-50 dark:hover:bg-zinc-800">
+              <!-- Sun / Moon icon swap via CSS -->
+              <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414"/><circle cx="12" cy="12" r="3.5"/></svg>
+              <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M21.64 13.03A9 9 0 1 1 10.97 2.36a7 7 0 1 0 10.67 10.67z"/></svg>
+            </button>
+            <a href="#rsvp" class="inline-flex items-center gap-2 rounded-xl bg-ink text-white px-4 py-2 text-sm hover:opacity-90 dark:bg-white dark:text-ink">
+              <span>Konfirmasi</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 4.5 21 12l-7.5 7.5v-6H3v-3h10.5v-6z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden pt-28 md:pt-36">
+      <div class="absolute inset-0 -z-10 bg-paper"></div>
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="space-y-6">
+            <p class="uppercase tracking-[.35em] text-xs text-zinc-500">Undangan Pernikahan</p>
+            <h1 class="font-serif text-4xl md:text-6xl leading-tight">Aisyah <span class="text-blush-500">&</span> Fajar</h1>
+            <p class="text-zinc-600 dark:text-zinc-300 max-w-prose">Dengan memohon rahmat Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#rsvp" class="inline-flex items-center gap-2 rounded-2xl bg-blush-500 px-5 py-2.5 text-white shadow-soft hover:bg-blush-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21a1 1 0 0 1-.707-.293l-7-7a5 5 0 0 1 7.071-7.071L12 7.272l.636-.636a5 5 0 0 1 7.071 7.071l-7 7A1 1 0 0 1 12 21z"/></svg>
+                Konfirmasi RSVP
+              </a>
+              <a href="#event" class="inline-flex items-center gap-2 rounded-2xl border border-zinc-900/10 dark:border-white/10 px-5 py-2.5 hover:bg-zinc-50 dark:hover:bg-zinc-800">Lihat Detail Acara</a>
+            </div>
+            <!-- Countdown -->
+            <div class="mt-6 grid grid-cols-4 gap-3 max-w-md">
+              <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-4 text-center">
+                <div id="dd" class="text-2xl font-semibold">100</div>
+                <div class="text-xs text-zinc-500">Hari</div>
+              </div>
+              <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-4 text-center">
+                <div id="hh" class="text-2xl font-semibold">00</div>
+                <div class="text-xs text-zinc-500">Jam</div>
+              </div>
+              <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-4 text-center">
+                <div id="mm" class="text-2xl font-semibold">00</div>
+                <div class="text-xs text-zinc-500">Menit</div>
+              </div>
+              <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-4 text-center">
+                <div id="ss" class="text-2xl font-semibold">00</div>
+                <div class="text-xs text-zinc-500">Detik</div>
+              </div>
+            </div>
+          </div>
+          <!-- Hero Image Card -->
+          <div class="relative">
+            <div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-soft border border-white/20">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop" alt="Couple" class="h-full w-full object-cover">
+            </div>
+            <div class="absolute -bottom-6 -left-6 hidden md:block">
+              <div class="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-900/10 dark:border-white/10 px-6 py-4 shadow-soft">
+                <p class="text-xs uppercase tracking-[.2em] text-zinc-500">Tanggal Akad</p>
+                <p class="font-serif text-xl">Sabtu, 14 Februari 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Couple -->
+    <section id="couple" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="uppercase text-xs tracking-[.35em] text-zinc-500">Bismillahirrahmanirrahim</p>
+          <h2 class="font-serif text-3xl md:text-4xl mt-2">Mempelai</h2>
+          <p class="text-zinc-600 dark:text-zinc-300 mt-3">Dengan penuh rasa syukur, kami mempersembahkan pernikahan kami.</p>
+        </div>
+        <div class="mt-12 grid md:grid-cols-2 gap-8">
+          <div class="rounded-3xl overflow-hidden border border-zinc-900/10 dark:border-white/10">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop" class="h-72 w-full object-cover" alt="Bride">
+            <div class="p-6">
+              <h3 class="font-serif text-2xl">Aisyah Rahma</h3>
+              <p class="text-zinc-600 dark:text-zinc-300">Putri dari Bapak Ahmad & Ibu Siti</p>
+              <div class="mt-4 flex items-center gap-4 text-sm text-zinc-500">
+                <a href="#" class="link-underline">Instagram</a>
+                <a href="#" class="link-underline">Facebook</a>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden border border-zinc-900/10 dark:border-white/10">
+            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1600&auto=format&fit=crop" class="h-72 w-full object-cover" alt="Groom">
+            <div class="p-6">
+              <h3 class="font-serif text-2xl">Fajar Nugraha</h3>
+              <p class="text-zinc-600 dark:text-zinc-300">Putra dari Bapak Seto & Ibu Dewi</p>
+              <div class="mt-4 flex items-center gap-4 text-sm text-zinc-500">
+                <a href="#" class="link-underline">Instagram</a>
+                <a href="#" class="link-underline">Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="py-20 md:py-28 bg-zinc-50/70 dark:bg-zinc-900/40">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="font-serif text-3xl md:text-4xl">Kisah Kami</h2>
+            <p class="mt-3 text-zinc-600 dark:text-zinc-300">Berawal dari pertemuan sederhana yang tak terduga, kami belajar bahwa cinta adalah tentang tumbuh bersama.</p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-blush-500"></span>
+                Bertemu saat proyek sosial kampus tahun 2019.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-blush-500"></span>
+                Lamaran pada 1 Juni 2025 di rumah keluarga.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-blush-500"></span>
+                Menikah pada 14 Februari 2026.
+              </li>
+            </ul>
+          </div>
+          <div class="relative">
+            <div class="aspect-[16/10] rounded-3xl overflow-hidden border border-zinc-900/10 dark:border-white/10 shadow-soft">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" class="h-full w-full object-cover" alt="Our Story">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details -->
+    <section id="event" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="font-serif text-3xl md:text-4xl">Detail Acara</h2>
+          <p class="text-zinc-600 dark:text-zinc-300 mt-3">Merupakan kehormatan bagi kami jika Bapak/Ibu/Saudara/i berkenan hadir.</p>
+        </div>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <div class="rounded-3xl p-6 border border-zinc-900/10 dark:border-white/10">
+            <p class="text-xs uppercase tracking-[.2em] text-zinc-500">Akad Nikah</p>
+            <h3 class="font-serif text-2xl mt-1">Sabtu, 14 Feb 2026</h3>
+            <p class="text-zinc-600 dark:text-zinc-300">Pukul 08.00 WIB</p>
+            <p class="mt-2">Masjid Al-Hikmah, Jakarta</p>
+          </div>
+          <div class="rounded-3xl p-6 border border-zinc-900/10 dark:border-white/10">
+            <p class="text-xs uppercase tracking-[.2em] text-zinc-500">Resepsi</p>
+            <h3 class="font-serif text-2xl mt-1">Sabtu, 14 Feb 2026</h3>
+            <p class="text-zinc-600 dark:text-zinc-300">Pukul 11.00 — 14.00 WIB</p>
+            <p class="mt-2">Gedung Graha Cinta, Jakarta</p>
+          </div>
+          <div class="rounded-3xl p-6 border border-zinc-900/10 dark:border-white/10">
+            <p class="text-xs uppercase tracking-[.2em] text-zinc-500">Dress Code</p>
+            <h3 class="font-serif text-2xl mt-1">Sage & Neutral</h3>
+            <p class="text-zinc-600 dark:text-zinc-300">Tamu diharapkan memakai busana warna lembut.</p>
+          </div>
+        </div>
+        <div class="mt-10 grid md:grid-cols-2 gap-6 items-center">
+          <div class="rounded-3xl overflow-hidden border border-zinc-900/10 dark:border-white/10">
+            <!-- Replace with your Google Maps embed URL -->
+            <iframe class="w-full h-80" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.645879021214!2d106.816666!3d-6.175394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMzEuNCJTIDEwNsKwNDknMDAuMCJF!5e0!3m2!1sen!2sid!4v1700000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-serif text-2xl">Lokasi Resepsi</h3>
+            <p class="text-zinc-600 dark:text-zinc-300">Jl. Kebahagiaan No. 14, Jakarta Pusat</p>
+            <div class="flex gap-3">
+              <a target="_blank" href="https://maps.google.com" class="inline-flex items-center gap-2 rounded-xl bg-sage-500 text-white px-4 py-2 hover:bg-sage-600">
+                Buka di Maps
+              </a>
+              <button onclick="copyAddress()" class="inline-flex items-center gap-2 rounded-xl border border-zinc-900/10 dark:border-white/10 px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800">Salin Alamat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-20 md:py-28 bg-zinc-50/70 dark:bg-zinc-900/40">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="font-serif text-3xl md:text-4xl">Galeri</h2>
+          <p class="text-zinc-600 dark:text-zinc-300 mt-3">Beberapa momen perjalanan kami</p>
+        </div>
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" alt="Gallery 1"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Gallery 2"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop" alt="Gallery 3"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1505904267569-80ae2b1b7dd1?q=80&w=1200&auto=format&fit=crop" alt="Gallery 4"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1520256862855-398228c41684?q=80&w=1200&auto=format&fit=crop" alt="Gallery 5"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1508171997656-18d3a9f3f104?q=80&w=1200&auto=format&fit=crop" alt="Gallery 6"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=1200&auto=format&fit=crop" alt="Gallery 7"/>
+          <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" alt="Gallery 8"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="py-20 md:py-28">
+      <div class="mx-auto max-w-4xl px-4">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="font-serif text-3xl md:text-4xl">Konfirmasi Kehadiran</h2>
+          <p class="text-zinc-600 dark:text-zinc-300 mt-3">Mohon bantu kami menyiapkan acara terbaik untuk Anda.</p>
+        </div>
+        <form class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="text-sm text-zinc-600 dark:text-zinc-300">Nama Lengkap</label>
+            <input type="text" class="mt-2 w-full rounded-xl border border-zinc-900/10 dark:border-white/10 bg-white dark:bg-zinc-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blush-400" placeholder="Masukkan nama" />
+          </div>
+          <div>
+            <label class="text-sm text-zinc-600 dark:text-zinc-300">No. WhatsApp</label>
+            <input type="tel" class="mt-2 w-full rounded-xl border border-zinc-900/10 dark:border-white/10 bg-white dark:bg-zinc-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blush-400" placeholder="08xxxxxxxxxx" />
+          </div>
+          <div>
+            <label class="text-sm text-zinc-600 dark:text-zinc-300">Jumlah Tamu</label>
+            <select class="mt-2 w-full rounded-xl border border-zinc-900/10 dark:border-white/10 bg-white dark:bg-zinc-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blush-400">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm text-zinc-600 dark:text-zinc-300">Kehadiran</label>
+            <select class="mt-2 w-full rounded-xl border border-zinc-900/10 dark:border-white/10 bg-white dark:bg-zinc-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blush-400">
+              <option>Hadir</option><option>Tidak Hadir</option><option>Masih Pertimbangan</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label class="text-sm text-zinc-600 dark:text-zinc-300">Ucapan & Doa</label>
+            <textarea rows="4" class="mt-2 w-full rounded-xl border border-zinc-900/10 dark:border-white/10 bg-white dark:bg-zinc-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blush-400" placeholder="Tulis ucapan hangat untuk mempelai..."></textarea>
+          </div>
+          <div class="md:col-span-2 flex items-center justify-between">
+            <p class="text-xs text-zinc-500">Dengan menekan kirim, Anda menyetujui kebijakan privasi.</p>
+            <button type="button" onclick="fakeSubmit()" class="inline-flex items-center gap-2 rounded-xl bg-ink text-white px-5 py-3 hover:opacity-90 dark:bg-white dark:text-ink">
+              Kirim RSVP
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Gift Section -->
+    <section class="py-16 md:py-24 bg-zinc-50/70 dark:bg-zinc-900/40">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h2 class="font-serif text-3xl">Kado Pernikahan</h2>
+        <p class="text-zinc-600 dark:text-zinc-300 mt-3">Doa Anda adalah kado terbaik. Jika berkenan, Anda juga dapat mengirim kado melalui:</p>
+        <div class="mt-8 grid md:grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-5">
+            <p class="text-sm text-zinc-500">Transfer Bank</p>
+            <p class="mt-1 font-semibold">BCA 1234567890</p>
+            <p>a.n. Aisyah</p>
+            <button onclick="copyText('BCA 1234567890 a.n. Aisyah')" class="mt-3 text-sm link-underline">Salin</button>
+          </div>
+          <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-5">
+            <p class="text-sm text-zinc-500">e-Wallet</p>
+            <p class="mt-1 font-semibold">Gopay 0812-xxxx-xxxx</p>
+            <button onclick="copyText('Gopay 0812-xxxx-xxxx')" class="mt-3 text-sm link-underline">Salin</button>
+          </div>
+          <div class="rounded-2xl border border-zinc-900/10 dark:border-white/10 p-5">
+            <p class="text-sm text-zinc-500">Alamat Kado</p>
+            <p class="mt-1">Jl. Kebahagiaan No. 14, Jakarta</p>
+            <button onclick="copyText('Jl. Kebahagiaan No. 14, Jakarta')" class="mt-3 text-sm link-underline">Salin</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-zinc-500">#AisyahFajarForever</p>
+          <p class="text-sm">Terima kasih atas doa & kehadirannya.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Theme toggle with localStorage
+      const themeToggle = document.getElementById('themeToggle');
+      const root = document.documentElement;
+      (function initTheme(){
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if(saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+      })();
+      themeToggle?.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      });
+
+      // Countdown (set your wedding date here)
+      const targetDate = new Date('2026-02-14T08:00:00+07:00').getTime();
+      const dd = document.getElementById('dd');
+      const hh = document.getElementById('hh');
+      const mm = document.getElementById('mm');
+      const ss = document.getElementById('ss');
+      setInterval(() => {
+        const now = Date.now();
+        const distance = Math.max(0, targetDate - now);
+        const days = Math.floor(distance / (1000*60*60*24));
+        const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+        const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+        const seconds = Math.floor((distance % (1000*60)) / 1000);
+        if(dd) dd.textContent = days;
+        if(hh) hh.textContent = String(hours).padStart(2,'0');
+        if(mm) mm.textContent = String(minutes).padStart(2,'0');
+        if(ss) ss.textContent = String(seconds).padStart(2,'0');
+      }, 1000);
+
+      // Helpers
+      function copyAddress(){
+        copyText('Jl. Kebahagiaan No. 14, Jakarta Pusat');
+      }
+      function copyText(text){
+        navigator.clipboard.writeText(text);
+        alert('Disalin: ' + text);
+      }
+      function fakeSubmit(){
+        alert('Terima kasih! RSVP kamu sudah terekam.');
+      }
+    </script>
+  </body>
+</html>
